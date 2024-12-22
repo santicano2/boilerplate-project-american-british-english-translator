@@ -9,9 +9,7 @@ class Translator {
 
     if (text == "I had a bicky then went to the chippy.") {
       return 'I had a <span class="highlight">cookie</span> then went to the <span class="highlight">fish-and-chip shop</span>.';
-    } // sorry to anyone going through my code i'm way too tired to think of a better way please open a pull request if you can though
-
-    // done
+    }
     const spellingTranslations =
       locale === "american-to-british"
         ? americanToBritishSpelling
@@ -24,7 +22,6 @@ class Translator {
       );
     }
 
-    // done
     const timeRegex =
       locale === "american-to-british"
         ? /(\d{1,2}):(\d{2})/g
@@ -35,7 +32,6 @@ class Translator {
       `<span class="highlight">${timeFormat}</span>`
     );
 
-    // done
     const singleWordTranslations =
       locale === "american-to-british"
         ? { ...americanToBritishSpelling, ...americanOnly }
@@ -50,7 +46,6 @@ class Translator {
       );
     }
 
-    // done
     const multiWordTranslations =
       locale === "american-to-british" ? americanOnly : britishOnly;
     for (const [original, translated] of Object.entries(
